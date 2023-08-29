@@ -1,0 +1,80 @@
+@font-face {
+    font-family: fac;
+    src: url('Poppins-Light.ttf');
+}
+
+p1 {
+    font-family: 'fac';
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    background-color: #DCDCDC;
+}
+
+.card {
+    width: 60vh;
+    height: 35vh;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to right, #E35E5F, #E88549);
+    padding: 3%;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.image-div {
+    width: 43%;
+    height: 100%;
+}
+
+.text-div {
+    width: 57%;
+    padding-left: 3%;
+}
+
+.back-text {
+    font-size: 87%;
+}
+
+.image-div-2 {
+    width: 46%;
+    height: 100%;
+}
+
+.text-div-2 {
+    width: 54%;
+    padding-right: 3%;
+}
+
+img {
+    width: 100%;
+}
